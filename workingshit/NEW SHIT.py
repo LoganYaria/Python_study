@@ -1,6 +1,6 @@
 string = 'AAAAAAAAAAA'
 alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-i=0
+i=0 #кот 
 k=0
 j = 0
 s_1=1
