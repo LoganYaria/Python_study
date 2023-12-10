@@ -22,4 +22,3 @@ with file_path.open(mode='w', encoding='utf-8',newline='') as file:
     #     print(csv.writer(file).writerow(line))
     # метод writerows для работы со списком списков
     print(csv.writer(file).writerows(dialy_temperatures))
-
