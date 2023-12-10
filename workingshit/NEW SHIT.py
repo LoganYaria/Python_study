@@ -1,0 +1,42 @@
+string = 'AAAAAAAAAAA'
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+i=0
+k=0
+j = 0
+s_1=1
+s_2=1
+s_3=1
+symbol=1
+while k < 20_000:
+    while j != 26:
+        string=(string[:i]+alphabet[j]+string[i+1:])#Добавление символа [0]
+        print(string)
+        k = k + 1
+        #print(string)
+        j=j+1
+    if s_1%26!=0:
+         string = (string[:i]+alphabet[0]+string[i+1:])#Сброс строки 0
+         i=i+1
+         symbol = 1
+         string = string[:symbol] + alphabet[s_1] + string[symbol + 1:] #добавление символа [1]
+         i=0
+         j=0
+         s_1= s_1 + 1
+    elif s_2%26!=0:
+        string = (string[:i] + alphabet[0] + string[i + 1:])  # Сброс строки 0
+        string = (string[:i+1] + alphabet[0] + string[i + 2:])  # Сброс строки 1
+        symbol = symbol+1
+        string = string[:symbol] + alphabet[s_2] + string[symbol + 1:]  # добавление крайнего символа [2]
+        s_2 = s_2 + 1
+        s_1=1
+        j = 0
+    elif s_3%26!=0:
+        string = (string[:i] + alphabet[0] + string[i + 1:])  # Сброс строки 0
+        string = (string[:i+1] + alphabet[0] + string[i + 2:])  # Сброс строки 1
+        string = (string[:i + 2] + alphabet[0] + string[i + 3:])  # Сброс строки 3
+        symbol = symbol+2
+        string = string[:symbol] + alphabet[s_3] + string[symbol + 1:]  # добавление крайнего символа [2]
+        s_3 = s_3 + 1
+        s_1=1
+        s_2 = 1
+        j = 0
