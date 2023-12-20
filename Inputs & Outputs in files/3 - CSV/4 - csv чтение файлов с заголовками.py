@@ -1,6 +1,6 @@
 import pathlib
 import csv
-
+list=[]
 file_path = pathlib.Path.cwd()/'example/employees.csv'
 # # # чтение csv через открытие
 # file = file_path.open(mode='r',encoding='utf-8',newline='')
@@ -21,4 +21,5 @@ with file_path.open(mode='r',encoding='utf-8', newline='') as file:
     for row in reader:
         procee_row(row)
         print(row)
-        print(type(row['salary']))
+        list.append(row)
+        #print(type(row['salary']))

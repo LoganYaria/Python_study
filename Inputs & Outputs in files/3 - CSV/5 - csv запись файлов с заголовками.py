@@ -17,4 +17,3 @@ print(writer.writeheader())
 # # writerow метод запишет построчно, а writerows() метод запишетцеликом весь словарь
 print(writer.writerows(people))
 file.close
-#
