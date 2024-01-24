@@ -1,10 +1,7 @@
-import pathlib
 import csv
-def read_csv_fun():
-    file_path = pathlib.Path.cwd()/'practice_files/scores.csv'
+def read_csv_fun(path_to_read):
     score_list = []
-    dump_line =[]
-    with file_path.open(mode='r', encoding='utf-8', newline='') as file:
+    with path_to_read.open(mode='r', encoding='utf-8', newline='') as file:
         reader = csv.DictReader(file)
         for line in reader:
             line['score'] = int(line['score'])
@@ -17,5 +14,5 @@ def read_csv_fun():
                 else:
                     score_list.append(line)
                 break
-    sorted_scored_list = sorted(score_list, key=lambda x: x['score'], reverse=True)
+    sorted_scored_list = sorted(score_list, key=lambda x: x['score'], reverse=True)# Сортировка словаря по score по убыванию
     return(sorted_scored_list)
