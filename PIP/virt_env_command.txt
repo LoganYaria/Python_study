@@ -1,0 +1,15 @@
+#Создание виртуального окружения
+python -m venv venv1 #Лучше называтьтак, чтобы ты понимал, что это за venv
+
+#активация виртуального окружения
+venv1\Scripts\activate
+# если не разрешит, то
+Power shell--> Set-ExecutionPolicy
+
+#сохранение версий  пакетов в файлик requiremets
+pip freeze > requirements.txt
+#деактивация venv
+deactivate
+
+#Установка пакетов из файла requirements.txr
+pip install -Ur requirements.txt

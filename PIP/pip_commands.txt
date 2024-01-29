@@ -1,0 +1,26 @@
+#версия
+python -m pip --version
+
+#обновление
+python -m pip install --upgrade pip
+
+#вывод установленных пакетов
+python -m pip list
+
+#установка пакетов (requests)
+python -m pip install requests
+
+#установка определенных версий пакетов
+python -m pip install requests>=2.0 # pip установит версию 2 или больше
+python -m pip install requests<=2.0 # pip установит версию 2 или МЕНЬШЕ
+python -m pip install requests>2.0 # pip установит версию 2 или больше
+python -m pip install requests>=1.0,<=2.0 # если нужно установаить крайнюю версию 1 пере 2
+python -m pip install requests==2.22.0 # установит конкретную версию пакета
+
+#показать инфу о пакете
+python -m pip show requests
+
+#удаление пакета
+python -m pip uninstall requests # pip удалит пакет, !но не его зависимости!
+#удаление сразу нескольких пакетов
+python -m pip uninstall certifi chardet idna urllib3
