@@ -17,3 +17,8 @@ for page in pdf_extraction_file.pages[1:4]:
 
 with pdf_inscription_path.open(mode='wb') as file:
     pdf_inscription_file.write(file)
+
+# #Извлечение всех страниц из документа: метод appendPagesFromReader()
+pdf_inscription_file.appendPagesFromReader(pdf_extraction_file)
+with pdf_inscription_path.open(mode='wb') as file:
+    pdf_inscription_file.write(file)
