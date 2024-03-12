@@ -24,7 +24,7 @@ import sqlite3
 
 with sqlite3.connect('test_database.db') as connection:
     cursor = connection.cursor()
-    query = "SELECT datetime('now','localtime')"
+    query = "SELECT datetime('now','localtime');"
     result = cursor.execute(query)
     row = result.fetchone()
     time = row[0]
