@@ -1,6 +1,7 @@
 from urllib.request import urlopen
 
 url = 'http://olympus.realpython.org/profiles/aphrodite'
+#url = 'https://teplotattoo.ru/'
 #url = 'http://olympus.realpython.org/profiles/poseidon'
 page = urlopen(url) #возвращает HTTPResponse object
 html_bytes = page.read() # возвращает последовательность байтов
