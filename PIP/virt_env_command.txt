@@ -2,7 +2,7 @@
 python -m venv venv1 #Лучше называтьтак, чтобы ты понимал, что это за venv
 
 #активация виртуального окружения
-.venv1\Scripts\activate
+venv1\Scripts\activate
 # если не разрешит, то
 Power shell--> Set-ExecutionPolicy
 
@@ -11,5 +11,5 @@ pip freeze > requirements.txt
 #деактивация venv
 deactivate
 
-#Установка пакетов из файла requirements.txr
+#Установка пакетов из файла requirements.txt
 pip install -Ur requirements.txt
