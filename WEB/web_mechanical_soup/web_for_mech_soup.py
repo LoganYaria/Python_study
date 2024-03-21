@@ -37,3 +37,4 @@ for link in links:
     print(f'{text}: {adress}')
 
 print(login_page)
+print('end')
