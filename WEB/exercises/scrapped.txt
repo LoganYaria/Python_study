@@ -52,3 +52,57 @@ Favorite Color: Wine
 
 
 
+
+
+Profile: Aphrodite
+
+
+
+
+
+Name: Aphrodite
+
+Favorite animal: Dove
+
+Favorite color: Red
+
+Hometown: Mount Olympus
+
+
+
+
+
+Profile: Poseidon
+
+
+
+
+
+Name: Poseidon
+
+Favorite animal: Dolphin
+
+Favorite color: Blue
+
+Hometown: Sea
+
+
+
+
+
+Profile: Dionysus
+
+
+
+
+
+Name: Dionysus
+
+Hometown: Mount Olympus
+
+Favorite animal: Leopard 
+
+Favorite Color: Wine
+
+
+
