@@ -1,4 +1,5 @@
-
+def test_zero():
+    1/0
 
 def test_some_text_1(): # pytest считает тестом
     pass

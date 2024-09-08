@@ -8,5 +8,16 @@ def full_list():
 
     yield some_list
 
-    some_list = []
-    print('List is empty')
+    for i in range(4):
+        some_list.pop()
+    if len(some_list) == 0:
+        print('List is empty')
+
+
+
+# есть параметр autouse
+# Применение:
+# @pytest.fixture
+# def full_list(autouse=True):
+#     pass
+#  в таком случае фикстура будет юзаться по дэфолту в каждом тесте
