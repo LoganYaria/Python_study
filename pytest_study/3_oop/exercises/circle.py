@@ -1,32 +1,31 @@
-class Rectangle():
-    _name = 'Rectangle'
-
-    def __init__(self,side_1,side_2):
-
-        if not isinstance(side_2, int) or not isinstance(side_2, int):
+class Circle():
+    _name = 'Circle'
+    pi = 3.14159
+    def __init__(self,radius):
+        if not isinstance(radius, int):
             raise TypeError('sides should be int')
-
-        if side_2 <= 0 or side_1 <= 0:
+        if radius <= 0:
             raise ValueError('side should be positive')
 
-        self.side_2 = side_2
-        self.side_1 = side_1
-
+        self.radius = radius
     def get_name(self):
         return self._name
     def get_area(self):
-        return self.side_2*self.side_1
+        return round(self.pi * (self.radius**2))
     def get_perimeter(self):
-        return self.side_2 * 2 + self.side_1 * 2
+        return round(2 * self.pi * self.radius)
+
     def add_area(self,figure_name):
-        from circle import Circle
+        from rectangle import Rectangle
         from triangle import Triangle
         if isinstance(figure_name,Triangle) or isinstance(figure_name,Circle) or isinstance(figure_name,Rectangle):
             return (self.get_area()+figure_name.get_area())
         else:
             raise ValueError(f'{figure_name} isn\'t a figure')
-
 if __name__ =='__main__': # при импортировании модуля в другой файл код ниже выполняться не будет
+    cir_1 = Circle(0)
 
-    req_1 = Rectangle(2,4)
-    print(req_1.get_area())
+    print(cir_1.get_name(),cir_1.get_area(),cir_1.get_perimeter())
+
+
+
