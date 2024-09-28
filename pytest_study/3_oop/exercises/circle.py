@@ -23,7 +23,7 @@ class Circle():
         else:
             raise ValueError(f'{figure_name} isn\'t a figure')
 if __name__ =='__main__': # при импортировании модуля в другой файл код ниже выполняться не будет
-    cir_1 = Circle(0)
+    cir_1 = Circle(4)
 
     print(cir_1.get_name(),cir_1.get_area(),cir_1.get_perimeter())
 
