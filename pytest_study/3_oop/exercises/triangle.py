@@ -40,13 +40,5 @@ class Triangle():
             raise ValueError(f'{figure_name} isn\'t a figure')
 
 if __name__ =='__main__':
-    pass
-    # from rectangle import Rectangle
-    # from circle import Circle
-    # from square import Square
-    # tryn_1 = Triangle(3,4,5)
-    # tryn_2 = Square(5)
-    #
-    # print(tryn_1.get_area())
-    # print(tryn_2.get_area())
-    # print(tryn_1.add_area(tryn_2))
+    simple_tr = Triangle(10,15,20)
+    print(type(simple_tr.get_perimeter()))
