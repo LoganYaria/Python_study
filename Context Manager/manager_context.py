@@ -39,8 +39,8 @@ with path.open(mode='r', encoding='utf-8') as read_file:
     print(read_file.read())
 
 # Пример использхования менеджера контекста через класс
-with ManagedFile('managed_by_class_write.txt') as f:
-    f.write("It's managed context write by class!")
+with ManagedFile('managed_by_class_write.txt') as mf:
+    mf.write("It's managed context write by class!")
 
 # Пример использования менеджера констекста через декоратор-генератор
 with managed_file('meneged_by_contextlib.txt') as f:
