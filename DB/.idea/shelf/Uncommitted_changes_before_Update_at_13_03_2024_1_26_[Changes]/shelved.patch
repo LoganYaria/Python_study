@@ -1,0 +1,17 @@
+Index: SQLite_basic/connection_create_select.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import sqlite3\r\n#\r\n# connection = sqlite3.connect('test_database.db') # заюзав эту функцию, Py будет искать db c таким назв. в текущем dir,\r\n# # #  если не найдет, то создаст в текущем каталоге. Если нужен другой каталог, нужно указать полный путь\r\n# # # connection = sqlite3.connect(':memory:') # исп для создания db  в памяти, пока работает программа.\r\n#\r\n# print(type(connection))\r\n#\r\n# cursor = connection.cursor()\r\n# print(type(cursor)) # курсор есть окно для взаимодействия  проги с db. При помощи него можно создавать таблицы, выполнять\r\n# # # команды sql и получать результаты запросов\r\n#\r\n# #Использование функции SQLite datetime()\r\n# query = \"SELECT datetime('now','localtime')\" # SQL команда, возврашающая текущую дату\\время\r\n# result = cursor.execute(query) # тоже объект курсор\r\n# print(result)\r\n# row = result.fetchone() # fetchone() - метод возвращает кортеж с первой строкой результатов\r\n# print(row)\r\n# time = row[0]\r\n# print(time)\r\n# connection.close()\r\n\r\n# # Работа при помощи with\r\n\r\nwith sqlite3.connect('test_database.db') as connection:\r\n    cursor = connection.cursor()\r\n    query = \"SELECT datetime('now','localtime')\"\r\n    result = cursor.execute(query)\r\n    row = result.fetchone()\r\n    time = row[0]\r\n    print(time)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SQLite_basic/connection_create_select.py b/SQLite_basic/connection_create_select.py
+--- a/SQLite_basic/connection_create_select.py	(revision 69ae13c7955ddc77d3697cadebfa2b0c6feab99d)
++++ b/SQLite_basic/connection_create_select.py	(date 1710254558535)
+@@ -1,5 +1,5 @@
+ import sqlite3
+-#
++
+ # connection = sqlite3.connect('test_database.db') # заюзав эту функцию, Py будет искать db c таким назв. в текущем dir,
+ # # #  если не найдет, то создаст в текущем каталоге. Если нужен другой каталог, нужно указать полный путь
+ # # # connection = sqlite3.connect(':memory:') # исп для создания db  в памяти, пока работает программа.
